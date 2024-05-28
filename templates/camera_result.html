@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prediction Result</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/upload2.css">
   <link rel="stylesheet" href="/static/css/up.css">
 </head>
@@ -18,9 +19,9 @@
   </div>
   <nav class="nav">
     <ul class="menu1">
-      <li class="li1"><a href="/index">Home</a></li>
-      <li class="li2"><a href="/about">About Us</a></li>
-      <li class="li3"><a href="/treatment">Treatment</a></li>
+      <li class="li1" style="font-weight: bold;"><a href="/index">Home</a></li>
+      <li class="li2" style="font-weight: bold;"><a href="/about">About Us</a></li>
+      <li class="li3" style="font-weight: bold;"><a href="/treatment">Treatment</a></li>
     </ul>
   </nav>
   <button id="toggleNavbar" class="navbar-toggle">☰</button>
@@ -35,38 +36,36 @@
   </nav>
 </header>
 
-<section class="upload_card">
-  <div class="upload-card">
-    <div class="content">
-      <h2 class='h2'>Classification Result</h2>
-
+<section class = up_card>
+  <div class="upload_card">
+    <div class="image">
       <div class="image-con2">
         <img src="data:image/png;base64,{{ image_path }}" alt="Captured Image" id='result_image'>      
       </div>
+    </div>
+    <div class="upload_btns" id="result_cont">
+      <h2 class='h2'>Classification Result</h2>
 
       <p>SVM has classified : {{ predicted_class_svm1 }}</p>
-      <p>CNN has classified : {{ predicted_class_cnn1}}</p>
+      <p>CNN has classified : {{ predicted_class_cnn1 }}</p>
 
       <div>
-        <button class="result-btn" onclick="window.location.href='/'">Back</button>
+        <button class="result-btn" id="btns" onclick="window.location.href='/'">Back</button>
         {% if predicted_class_svm1 in ['Potato_EarlyBlight'] %}
-            <button class='b2' onclick="window.location.href='/treatment/earlyblight'">Treatment</button>
+            <button class='b2' id="btns" onclick="window.location.href='/treatment/earlyblight'">Treatment</button>
         {% elif predicted_class_svm1 in ['Potato_LateBlight'] %}
-            <button class='b2' onclick="window.location.href='/treatment/lateblight'">Treatment</button>
+            <button class='b2' id="btns" onclick="window.location.href='/treatment/lateblight'">Treatment</button>
         {% endif %}
       </div>
-
     </div>
   </div>
-
 </section>
-
 
 <footer>
   <div class="footer-container container"></div>
   <div class="f-design">
     <div class="f-design-txt container">
-      <p>2024 AgriTech All Right Reserved</p>
+      <p class="p1">2024 AgriTech All Right Reserved</p>
     </div>
   </div>
 </footer>

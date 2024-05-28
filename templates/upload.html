@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hidden Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/upload2.css" />
     <link rel="stylesheet" href="/static/css/up.css" />
   </head>
@@ -16,9 +17,9 @@
       </div>
       <nav class="nav">
         <ul class="menu1">
-          <li class="li1"><a href="/index">Home</a></li>
-          <li class="li2"><a href="/about">About Us</a></li>
-          <li class="li3"><a href="/treatment">Treatment</a></li>
+          <li class="li1" style="font-weight: bold;"><a href="/index">Home</a></li>
+          <li class="li2" style="font-weight: bold;"><a href="/about">About Us</a></li>
+          <li class="li3" style="font-weight: bold;"><a href="/treatment">Treatment</a></li>
         </ul>
       </nav>
       <button id="toggleNavbar" class="navbar-toggle">☰</button> 
@@ -33,7 +34,7 @@
       </nav>
     </header>
 
-    <section class="upload_card">
+    <!-- <section class="upload_card">
       <div class="upload-card">
         <div class="content">
           <div class=img>
@@ -52,13 +53,30 @@
           </div>
         </div>
       </div>
+    </section> -->
+
+    <section class = up_card>
+      <div class="upload_card">
+        <div class="image">
+          <img class = "up_img" src="/static/image/pl.jpg" alt="">
+          <div class="drop">
+            <h6>Drop Images Here</h6>
+          </div>
+        </div>
+        <div class="upload_btns">
+          <button type="button" class="btn" onclick="location.href='/click'">Click</button>
+          <button id="upload-button" type="button" class="btn" style="margin-top: 10px" onclick="location.href='/upload23'">
+              Upload
+          </button>
+        </div>
+      </div>
     </section>
 
     <footer>
       <div class="footer-container container"></div>
       <div class="f-design">
         <div class="f-design-txt container">
-          <p>2024 AgriTech All Right Reserved</p>
+          <p class="p1">2024 AgriTech All Right Reserved</p>
         </div>
       </div>
     </footer>

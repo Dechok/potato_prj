@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hidden Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/upload2.css" />
     <link rel="stylesheet" href="/static/css/up.css" />
   </head>
@@ -14,9 +15,9 @@
       </div>
       <nav class="nav">
         <ul class="menu1">
-          <li class="li1"><a href="/index">Home</a></li>
-          <li class="li2"><a href="/about">About Us</a></li>
-          <li class="li3"><a href="/treatment">Treatment</a></li>
+          <li class="li1" style="font-weight: bold;"><a href="/index">Home</a></li>
+          <li class="li2" style="font-weight: bold;"><a href="/about">About Us</a></li>
+          <li class="li3" style="font-weight: bold;"><a href="/treatment">Treatment</a></li>
         </ul>
       </nav>
       <button id="toggleNavbar" class="navbar-toggle">☰</button>
@@ -33,43 +34,34 @@
       </nav>
     </header>
 
-    <section class="upload_card">
-      <div class="upload-card">
-        <div class="content">
-          <div class="image-con">
-              <img
-                id="uploaded-image"
-                
-                src="/static/image/leave2.png"
-                alt="Uploaded Image"/>
-            </div>
-            <div>
-              <form
+    
+    <section class = up_card>
+      <div class="upload_card">
+        <div class="image">
+          <img class = "up_img" id ="uploaded-image" src="/static/image/pl.jpg" alt="">
+          <div class="drop">
+            <h6>Drop Images Here</h6>
+          </div>
+        </div>
+        <div class="upload_btns">
+          <form
                 id="upload-form"
                 action="/classify"
                 method="post"
-                enctype="multipart/form-data"
-              >
+                enctype="multipart/form-data">
 
-              <label for="file-upload" class="custom-file-upload">
-                <i class="fas fa-cloud-upload-alt"></i> Choose File
-            </label>
-
-              <input type="file" id="file-upload" name="file" accept="image/*" style="display: none;">
-
+              <div class="label">
+                <label for="file-upload" class="custom-file-upload">
+                  <i class="fas fa-cloud-upload-alt"></i> Choose File
+                </label>
+                <input type="file" id="file-upload" name="file" accept="image/*" style="display: none;">
                 <input type="hidden" id="image-path" name="image_path" />
-                <button
-                  type="submit"
-                  id="upload-button"
-                  class="btn"
-  
-                  
-                >
-                  Classify
-                </button>
+              </div>
+              <div>
+                <button type="submit" id="upload-button1" class="btn"> Classify </button>
 
-              </form>
-            </div>
+              </div>
+          </form>
         </div>
       </div>
     </section>
@@ -78,7 +70,7 @@
       <div class="footer-container container"></div>
       <div class="f-design">
         <div class="f-design-txt container">
-          <p>2024 AgriTech All Right Reserved</p>
+          <p class="p1">2024 AgriTech All Right Reserved</p>
         </div>
       </div>
     </footer>
@@ -104,7 +96,7 @@
       // Add change event listener to the file input
       document
         .getElementById("file-upload")
-        .addEventListener("change", function () {
+        .addEventListener("image", function () {
           // Get the file input element
           var input = document.getElementById("file-upload");
 

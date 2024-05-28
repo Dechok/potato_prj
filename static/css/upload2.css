@@ -4,11 +4,11 @@
     box-sizing: border-box;
   }
   body {
-    font-family: Georgia;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
   
   h1 {
-    font-family: Georgia;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
   
   header {
@@ -171,29 +171,32 @@
   /* //........ Footer ...... // */
   
   footer {
-      width: 100%;
-      background-color: #4cd038;
-      margin:0px;
-    }
-    
-    .footer-container {
-      display: flex;
-      justify-content: space-between;
-      padding: 12px 0;
-    }
-    
-    .f-design {
-      width: 100%;
-      text-align: center;
-    }
-    
-    .f-design .f-design-txt {
-      /* padding: 25px 0; */
-      padding-top:10px;
-      padding-bottom:30px;
-      font-size: 14px;
-      color: white;
-    }
+    width: 100%;
+    background-color: #4cd038;
+    margin:0px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+  }
+  
+  .f-design {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .f-design .f-design-txt {
+    /* padding: 25px 0; */
+    padding-top:0px;
+    padding-bottom:30px;
+    font-size: 14px;
+    color: white;
+  }
+  .p1{
+    font-size: 14px;
+}
     .nav {
       display: flex; /* Make the nav a flex container */
       align-items: center; /* Vertically center align items */

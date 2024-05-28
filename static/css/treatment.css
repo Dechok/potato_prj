@@ -3,7 +3,7 @@
     padding: 0px;
 }
 body {
-    font-family: Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .container {
@@ -32,6 +32,7 @@ body {
     flex-direction: column;
     gap: 10px;
     flex: 1;
+    height:100px;
 }
 
 .rounded-image {
@@ -70,7 +71,10 @@ body {
 h1{
   padding-bottom: 16px;
 }
-
+.container .column .text{
+  max-height: 480px;
+  margin-top: 10PX;
+}
 /* Media Queries */
 @media only screen and (max-width: 480px) {
     /* Phone Styles */
